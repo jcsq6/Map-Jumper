@@ -2,6 +2,9 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
+#include "../assets/background.xpm"
+
+extern uint8_t* b[];
 
 int main(int argc, char* argv[]) {
 	int fps = 60;
@@ -14,6 +17,7 @@ int main(int argc, char* argv[]) {
 	bool isFullscreen = false;
 
 	SDL_Init(SDL_INIT_EVERYTHING);
+	IMG_Init(IMG_INIT_PNG);
 	TTF_Init();
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 	Mix_AllocateChannels(2);
@@ -107,7 +111,7 @@ beginLvl:
 	world mainWorld(1920, 1080, lvlJson, renderer);
 	player mainPlayer(&mainWorld, renderer);
 
-	texture background("assets/background.png", renderer, 1920, 1080);
+	texture background(background_xpm, renderer, 1920, 1080);
 
 	while (running) {
 		frameStrt = SDL_GetTicks();

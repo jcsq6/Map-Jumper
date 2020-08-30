@@ -6,6 +6,21 @@
 #include <vector>
 #include <utility>
 #include <string_view>
+#include "../assets/Blue_Cube.xpm"
+#include "../assets/Blue_Cube_Fade.xpm"
+#include "../assets/blueSpike.xpm"
+#include "../assets/blueSpikeFade.xpm"
+#include "../assets/Blue_Jump.xpm"
+#include "../assets/Red_Cube.xpm"
+#include "../assets/Red_Cube_Fade.xpm"
+#include "../assets/redSpike.xpm"
+#include "../assets/redSpikeFade.xpm"
+#include "../assets/Red_Jump.xpm"
+#include "../assets/Neutral_Cube.xpm"
+#include "../assets/Neutral_Jump.xpm"
+#include "../assets/neutralSpike.xpm"
+
+
 
 enum cube {
 	blue,
@@ -37,19 +52,19 @@ public:
 		w = width;
 		h = height;
 
-		blueText = texture("assets/Blue_Cube.png", renderer, 64, 64);
-		blueFadeText = texture("assets/Blue_Cube_Fade.png", renderer, 64, 64);
-		blueSpikeText = texture("assets/blueSpike.png", renderer, 64, 64);
-		blueSpikeFadeText = texture("assets/blueSpikeFade.png", renderer, 64, 64);
-		redText = texture("assets/Red_Cube.png", renderer, 64, 64);
-		redFadeText = texture("assets/Red_Cube_Fade.png", renderer, 64, 64);
-		redSpikeText = texture("assets/redSpike.png", renderer, 64, 64);
-		redSpikeFadeText = texture("assets/redSpikeFade.png", renderer, 64, 64);
-		neutralText = texture("assets/Neutral_Cube.png", renderer, 64, 64);
-		neutralSpikeText = texture("assets/neutralSpike.png", renderer, 64, 64);
-		neutralJumpText = texture("assets/Neutral_Jump.png", renderer, 64, 64);
-		redJumpText = texture("assets/Red_Jump.png", renderer, 64, 64);
-		blueJumpText = texture("assets/Blue_Jump.png", renderer, 64, 64);
+		blueText = texture(Blue_Cube_xpm, renderer, 64, 64);
+		blueFadeText = texture(Blue_Cube_Fade_xpm, renderer, 64, 64);
+		blueSpikeText = texture(blueSpike_xpm, renderer, 64, 64);
+		blueSpikeFadeText = texture(blueSpikeFade_xpm, renderer, 64, 64);
+		redText = texture(Red_Cube_xpm, renderer, 64, 64);
+		redFadeText = texture(Red_Cube_Fade_xpm, renderer, 64, 64);
+		redSpikeText = texture(redSpike_xpm, renderer, 64, 64);
+		redSpikeFadeText = texture(redSpikeFade_xpm, renderer, 64, 64);
+		neutralText = texture(Neutral_Cube_xpm, renderer, 64, 64);
+		neutralSpikeText = texture(neutralSpike_xpm, renderer, 64, 64);
+		neutralJumpText = texture(Neutral_Jump_xpm, renderer, 64, 64);
+		redJumpText = texture(Red_Jump_xpm, renderer, 64, 64);
+		blueJumpText = texture(Blue_Jump_xpm, renderer, 64, 64);
 
 		limits.push_back(boundingBox(-20, 0, 20, h));
 		limits.push_back(boundingBox(w, 0, 20, h));

@@ -8,16 +8,15 @@
 class texture {
 public:
 	texture() {}
-	texture(const char* filename, SDL_Renderer* rend, int w, int h) {
+	texture(char **arr, SDL_Renderer* rend, int w, int h){
 		renderer = rend;
 
-		IMG_Init(IMG_INIT_PNG);
-
-		surf = IMG_Load(filename);
-		textre = SDL_CreateTextureFromSurface(rend, surf);
+		surf = IMG_ReadXPMFromArray(arr);
 
 		width = w;
 		height = h;
+
+		textre = SDL_CreateTextureFromSurface(rend, surf);
 
 		srcRect.x = 0;
 		srcRect.y = 0;

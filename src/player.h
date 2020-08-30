@@ -5,6 +5,7 @@
 #include <SDL2/SDL_mixer.h>
 #include "bounds.h"
 #include "world.h"
+#include "../assets/cubeText.xpm"
 
 class player {
 public:
@@ -16,7 +17,7 @@ public:
 		rend = renderer;
 		world1 = w1;
 		pos = world1->getSpawn();
-		cubeText = texture("assets/cubeText.png", renderer, w, h);
+		cubeText = texture(cubeText_xpm, renderer, w, h);
 		if (pos.x == 0) pos.x = 2;
 		if (pos.y == 0) pos.y = 2;
 		if (pos.x == world1->getWidth()) pos.x = world1->getWidth() - 2;
