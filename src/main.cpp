@@ -4,7 +4,7 @@
 #include <vector>
 #include "../assets/background.xpm"
 
-extern uint8_t* b[];
+#undef main
 
 int main(int argc, char* argv[]) {
 	int fps = 60;
