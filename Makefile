@@ -11,6 +11,7 @@ debug : exe
 
 windows: EXE_FILE = bin/mapJumper.exe
 windows: CC = x86_64-w64-mingw32-g++
+windows: FLAGS += -lmingw32 -lSDL2main -lSDL2 -mwindows -Wl,--no-undefined -Wl,--dynamicbase -Wl,--nxcompat -lm -ldinput8 -ldxguid -ldxerr8 -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lsetupapi -lversion -luuid -static-libgcc
 windows: exe
 
 $(EXE_FILE) : $(OBJ_FILES)
