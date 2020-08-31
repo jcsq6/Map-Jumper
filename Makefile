@@ -1,6 +1,6 @@
 EXE_FILE = bin/MapJumper
 OBJ_FILES = obj/main.o
-FLAGS = --std=c++17 -w
+FLAGS = --std=c++17 -w -fpermissive
 CC = g++
 
 exe : clean
