@@ -2,7 +2,7 @@
 #include "bounds.h"
 #include "texture.h"
 #include <iostream>
-#include <json.hpp>
+#include "json.hpp"
 #include <vector>
 #include <utility>
 #include <string_view>
